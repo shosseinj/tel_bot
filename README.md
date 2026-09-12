@@ -1,11 +1,15 @@
+# Telegram Bot Prototype
 
-# Telegram Bot with GPT Integration in **Python**
-This is a simple Telegram bot using Flask and aiogram with GPT-4 integration.
+A small Python prototype for integrating a Telegram bot with an external application/API workflow.
 
-Accessible by [Colab](https://colab.research.google.com/drive/1LiWoIOyNUpokGh-DO2UoPlVpG9Wu9dHJ#scrollTo=v3ao7CDGhB7F) in [Gmail](hossein97jafari@gmail.com)
+## Purpose
 
-## Requirements
-- Python 3.8+
-- Flask
-- aiogram
-- g4f
+The repository was created as an experiment in message-driven automation and bot integration. `app.py` contains the main application logic and `requirements.txt` records the Python dependencies.
+
+## Configuration
+
+The current prototype imports its bot token from `token.py`; it does not yet read the value from an environment variable. Before running or extending the project, revoke the committed token, replace the hard-coded configuration with environment-based loading, and exclude local secret files from Git.
+
+## Security
+
+The repository currently contains a token-shaped value in tracked history. Rotation is required even if the current file is later changed, because the old value remains accessible from earlier commits.
