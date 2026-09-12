@@ -13,3 +13,21 @@ The current prototype imports its bot token from `token.py`; it does not yet rea
 ## Security
 
 The repository currently contains a token-shaped value in tracked history. Rotation is required even if the current file is later changed, because the old value remains accessible from earlier commits.
+
+
+## Goal
+
+The prototype connects Telegram messages to a small Python service and an external text-generation workflow. Its value is as an early integration experiment, not as a production bot framework.
+
+## Installation and Use
+
+After revoking the exposed token and changing `token.py` to load a replacement from a local secret source, create an environment and install the recorded dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python app.py
+```
+
+On Windows PowerShell, activate the environment with `.venv\Scripts\Activate.ps1`. The Flask health service uses the `PORT` environment variable and defaults to port 5001. Review `app.py` before use because the bot and Flask server run concurrently.
